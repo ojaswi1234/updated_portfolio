@@ -35,8 +35,8 @@ export const CredentialsSection = () => {
   return (
     <section id="credentials" className="opacity-0 w-full py-20 flex flex-col items-center gap-20">
       {/* Education */}
-      <div className="w-full">
-        <div className="neo-box bg-neo-green dark:bg-green-800 p-4 mb-10 transform -rotate-1 self-start inline-block">
+      <div className="w-full flex flex-col items-center">
+        <div className="neo-box bg-neo-green dark:bg-green-800 p-4 mb-10 transform -rotate-1">
           <h2 className="text-3xl md:text-4xl font-black uppercase text-black dark:text-white tracking-widest">
             Education
           </h2>
@@ -61,8 +61,8 @@ export const CredentialsSection = () => {
       </div>
 
       {/* Certifications */}
-      <div className="w-full">
-        <div className="neo-box bg-neo-pink dark:bg-pink-800 p-4 mb-10 transform rotate-1 self-start inline-block">
+      <div className="w-full flex flex-col items-center">
+        <div className="neo-box bg-neo-pink dark:bg-pink-800 p-4 mb-10 transform rotate-1">
           <h2 className="text-3xl md:text-4xl font-black uppercase text-black dark:text-white tracking-widest">
             Certifications
           </h2>

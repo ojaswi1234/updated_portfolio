@@ -42,7 +42,7 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="opacity-0 w-full py-20 flex flex-col items-center">
-      <div className="neo-box w-full max-w-5xl bg-white dark:bg-zinc-800 p-8 md:p-12 relative">
+      <div className="neo-box w-full max-w-5xl bg-white dark:bg-zinc-800 p-4 sm:p-8 md:p-12 relative">
         <div className="absolute -top-6 -left-6 bg-neo-cyan border-4 border-black dark:border-white p-3 z-10 hidden md:block">
           <h2 className="text-3xl font-black uppercase text-black">Contact Me</h2>
         </div>

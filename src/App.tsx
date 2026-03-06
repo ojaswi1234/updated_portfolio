@@ -117,8 +117,8 @@ export default function Home() {
     <>
       <Scanlines />
       
-      <main className="min-h-screen py-6 px-4 sm:px-8 md:px-12 lg:px-20 max-w-7xl mx-auto space-y-16 pt-24">
-        <div className="fixed top-4 right-4 z-50">
+      <main className="min-h-screen py-6 px-4 sm:px-8 md:px-12 lg:px-20 max-w-7xl mx-auto space-y-10 md:space-y-16 pt-20 md:pt-8">
+        <div className="fixed top-[70px] md:top-4 right-4 z-50">
             <ModeToggle />
         </div>
         <NavBar />
@@ -178,7 +178,7 @@ export default function Home() {
         {/* Terminal View — moved outside main below */}
 
       {/* GitHub Stats */}
-      <section id="github-stats" className="neo-box bg-white dark:bg-zinc-800 p-8 w-full opacity-0">
+      <section id="github-stats" className="neo-box bg-white dark:bg-zinc-800 p-4 md:p-8 w-full opacity-0">
         <h2 className="text-3xl md:text-5xl font-black uppercase text-black dark:text-white mb-8 border-b-4 border-black dark:border-white pb-4">
           GitHub Stats
         </h2>
@@ -207,15 +207,15 @@ export default function Home() {
     {isTerminalOpen && (
       <div ref={terminalOverlayRef} className="fixed inset-0 flex items-center justify-center p-4" style={{ zIndex: 10000, background: 'rgba(0, 0, 0, 0.8)' }} onClick={closeTerminal}>
         <div ref={terminalBoxRef} className="w-full max-w-5xl bg-[#0a0e14] rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10" onClick={e => e.stopPropagation()}>
-          <div className="bg-gradient-to-r from-zinc-800 to-zinc-700 border-b border-zinc-600 px-4 py-3 flex items-center gap-3">
+          <div className="bg-gradient-to-r from-zinc-800 to-zinc-700 border-b border-zinc-600 px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2 sm:gap-3">
             <div className="flex gap-2">
               <button title="Close Terminal" onClick={closeTerminal} className="w-3 h-3 rounded-full bg-red-500 border border-red-600 hover:bg-red-600 transition-colors cursor-pointer"></button>
               <div className="w-3 h-3 rounded-full bg-yellow-500 border border-yellow-600"></div>
               <button title="Maximize Terminal" className="w-3 h-3 rounded-full bg-green-500 border border-green-600 hover:bg-green-600 transition-colors cursor-pointer"></button>
             </div>
-            <span className="font-mono text-green-400 text-sm font-bold">ojaswi@portfolio:~</span>
+            <span className="font-mono text-green-400 text-xs sm:text-sm font-bold truncate">ojaswi@portfolio:~</span>
           </div>
-          <div className="h-[70vh] overflow-hidden">
+          <div className="h-[55vh] sm:h-[65vh] md:h-[70vh] overflow-hidden overflow-x-auto">
             <TerminalSection onClose={closeTerminal} />
           </div>
         </div>
