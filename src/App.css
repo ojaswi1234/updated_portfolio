@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --color-neo-yellow: #fde047;
+  --color-neo-pink: #f9a8d4;
+  --color-neo-cyan: #67e8f9;
+  --color-neo-green: #86efac;
+  --color-neo-orange: #fdba74;
+  
+  --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+  --animate-glitch: glitch 1s linear infinite;
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.33%); }
+}
+
+@keyframes glitch {
+  2%, 64% { transform: translate(2px,0) skew(0deg); }
+  4%, 60% { transform: translate(-2px,0) skew(0deg); }
+  62% { transform: translate(0,0) skew(5deg); }
+}
+
+:root {
+  --background: #fdfdfd;
+  --foreground: #000000;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300 font-sans;
+    /* Neo-brutalism grid background — light mode */
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.07) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-color: var(--background);
+  }
+}
+
+/* Dark mode grid override at root level so :is(.dark *) specificity is correct */
+.dark body {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-color: var(--background);
+}
+
+.neo-box {
+  @apply border-4 border-black dark:border-white shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#fff];
+}
+
+.neo-btn {
+  @apply border-4 border-black dark:border-white shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#fff] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_#000] dark:hover:shadow-[4px_4px_0px_#fff] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none font-bold;
+}
+

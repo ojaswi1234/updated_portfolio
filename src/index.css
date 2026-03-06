@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fdfdfd;
+  --color-foreground: #000000;
+  --color-neo-yellow: #fde047;
+  --color-neo-pink: #f9a8d4;
+  --color-neo-cyan: #67e8f9;
+  --color-neo-green: #86efac;
+  --color-neo-orange: #fdba74;
+}
+
+:root {
+  --background: #fdfdfd;
+  --foreground: #000000;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #ffffff;
+  --color-background: #111111;
+  --color-foreground: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    /* Neo-brutalism grid background — light mode */
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.07) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-color: var(--background);
+  }
+}
+
+/* Dark mode grid override */
+.dark body {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-color: var(--background);
+}
+
+@layer components {
+  .neo-box {
+    @apply border-4 border-black dark:border-white shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#fff];
+  }
+
+  .neo-btn {
+    @apply border-4 border-black dark:border-white shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#fff] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_#000] dark:hover:shadow-[4px_4px_0px_#fff] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none font-bold;
+  }
+}
+
