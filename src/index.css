@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Tailwind v4: use .dark class instead of prefers-color-scheme */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-background: #fdfdfd;
   --color-foreground: #000000;
@@ -34,6 +37,14 @@
   }
 }
 
+/* Hide native scrollbar */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
 /* Dark mode grid override */
 .dark body {
   background-image:
@@ -50,6 +61,13 @@
 
   .neo-btn {
     @apply border-4 border-black dark:border-white shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#fff] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_#000] dark:hover:shadow-[4px_4px_0px_#fff] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none font-bold;
+  }
+}
+
+/* Hide scroll indicator on mobile */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: none !important;
   }
 }
 

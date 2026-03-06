@@ -7,9 +7,9 @@ const experiences = [
     period: "Jun 2025 – Nov 2025",
     color: "bg-neo-cyan",
     bullets: [
-      "Refactored core Java modules by eliminating inefficient logic paths, improving execution efficiency by over 25%.",
-      "Designed a high-throughput allocation engine using Factory and Singleton design patterns, improving processing accuracy and code maintainability.",
-      "Ranked in the top 10th percentile of trainees by consistently delivering modular, testable code that passed system design and unit testing benchmarks.",
+      "Worked on core Java modules, cleaning up inefficient logic and improving code performance.",
+      "Built an allocation engine using Factory and Singleton design patterns for better code structure.",      "Collaborated with cross-functional teams to integrate new features and optimize existing ones.",
+      "Implemented unit tests to ensure code quality and proper edge case handling"
     ],
   },
 ];
