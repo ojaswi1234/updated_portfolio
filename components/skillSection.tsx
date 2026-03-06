@@ -1,5 +1,3 @@
-import React from 'react'
-
 type Skill = { name: string; src: string }
 
 const categories: { label: string; color: string; skills: Skill[] }[] = [
@@ -53,19 +51,6 @@ const categories: { label: string; color: string; skills: Skill[] }[] = [
     ],
   },
 ]
-
-// Rotating tag accent colors — all light-vivid so text-black always works
-const TAG_COLORS = [
-  "bg-neo-yellow",
-  "bg-white dark:bg-zinc-900 dark:text-white",
-  "bg-neo-pink",
-  "bg-neo-cyan",
-  "bg-neo-green",
-  "bg-neo-orange",
-]
-
-// Slight random-ish rotation by position
-const TAG_ROTATIONS = ["rotate-0", "rotate-1", "-rotate-1", "rotate-0", "rotate-1", "-rotate-1"]
 
 export const SkillSection = () => {
   return (

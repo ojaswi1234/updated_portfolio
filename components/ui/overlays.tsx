@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-
+// All imports removed
 export const Scanlines = () => {
     return (
         <div className="pointer-events-none fixed top-0 left-0 h-screen w-screen z-[100] opacity-[0.04] mix-blend-overlay pointer-events-none select-none">

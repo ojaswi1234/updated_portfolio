@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { animate, createTimeline } from 'animejs';
 
 export const AnimeLoader = ({ onComplete }: { onComplete: () => void }) => {
@@ -63,7 +63,7 @@ export const AnimeLoader = ({ onComplete }: { onComplete: () => void }) => {
       scaleX: [0.3, 1], 
       easing: "easeOutExpo",
       duration: 800,
-      delay: (el: any, i: number) => 100 + 30 * i 
+      delay: (_el: any, i: number) => 100 + 30 * i 
     }, 200);
 
     // 5. Text Scramble Effect (Random Characters)

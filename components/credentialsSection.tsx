@@ -1,4 +1,4 @@
-import React from 'react';
+/* deleted unused import React */
 
 const certifications = [
   {
