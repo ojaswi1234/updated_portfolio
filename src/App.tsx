@@ -15,6 +15,7 @@ import { ContactSection } from "../components/contactus";
 import { TerminalSection } from "../components/terminalSection";
 import { ProjectSection } from "../components/projectSection";
 import { ScrollIndicator } from "../components/ScrollIndicator";
+import { VisitorCounter } from "../components/VisitorCounter";
 
 export default function Home() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
@@ -161,6 +162,7 @@ export default function Home() {
                 </svg>
               </button>
             </div>
+            <VisitorCounter />
           </div>
 
           {/* Right Side: Photo */}
