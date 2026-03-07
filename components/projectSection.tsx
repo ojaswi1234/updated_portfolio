@@ -19,7 +19,7 @@ const projects: Project[] = [
     period: "Jul 2025 – Nov 2025",
     stack: "Flutter · GraphQL · Supabase · Hive · WebSockets",
     color: "bg-neo-cyan",
-    github: "https://github.com/ojaswi1234",
+    github: "https://github.com/ojaswi1234/ConnectUs.git",
     bullets: [
       "Built a WebSocket messaging layer supporting concurrent client sessions with automated reconnection logic — maintaining ≈250ms latency under high load.",
       "Reduced GraphQL payload size by ~30% by eliminating nested over-fetching and applying schema-level caching, cutting bandwidth and parse overhead.",
@@ -34,7 +34,7 @@ const projects: Project[] = [
     color: "bg-neo-orange",
     live: "https://github.com/ojaswi1234",
     liveLabel: "Live Demo",
-    github: "https://github.com/ojaswi1234",
+    github: "https://devops-project-quzm.onrender.com/",
     bullets: [
       "Containerized a multi-tenant Node.js application using Docker, ensuring environment parity across development, staging, and production.",
       "Built a real-time axios module for server health monitoring with structured logging and automated error alerts.",
